@@ -2,13 +2,16 @@ import styled from 'styled-components'
 import NumberSelector from './NumberSelector'
 import GameScore from './GameScore'
 import DiceNumber from './DiceNumber'
+import GameRules from './GameRules'
 import { useState } from 'react'
+import {Button} from '../Styles/Button'
 
 const PlayGame = () => {
   let [currentScore, setCurrentScore] = useState(0)
   let [selectedNumber, setSelectedNumber] = useState()
   let [randomNumber, setRandomNumber] = useState(1)
   const [error, seterror] = useState('')
+  let [showRules, setShowRules] =  useState(false)
 
   const getRndInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min
@@ -43,7 +46,11 @@ const PlayGame = () => {
       </Container>
       <ImageContainer>
         <DiceNumber randomNumber={randomNumber} rolldice={rolldice} />
+        <Button className='transparent' onClick={() => setCurrentScore(0)}>Reset</Button>
+        <Button onClick={() => setShowRules((prev) => !prev)}>{showRules ? "Hide" : "Show"} Rules</Button>
       </ImageContainer>
+      {showRules && <GameRules></GameRules>}
+
     </>
   )
 }
@@ -61,4 +68,12 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+
+  .transparent {
+    background-color: white;
+    color: black
+
+
+  }
 `
