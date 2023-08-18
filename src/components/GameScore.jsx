@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import styled from 'styled-components'
 
-const GameScore = () => {
-  let [currentScore, setCurrentScore] = useState(0)
+const GameScore = ({currentScore}) => {
 
   return (
     <Container>
@@ -15,9 +13,9 @@ const GameScore = () => {
 export default GameScore
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
   h1 {
     font-size: 96px;
     font-weight: 500px;

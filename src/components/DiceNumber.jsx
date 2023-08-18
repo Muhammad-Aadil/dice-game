@@ -1,21 +1,11 @@
 import styled from 'styled-components'
-import { useState } from 'react'
 
-const DiceNumber = ({randomNumber, setRandomNumber}) => {
-
-  const getRndInteger = (min, max) => {
-    return Math.floor(Math.random() * (max - min)) + min
-  }
-
-  const change_image = () => {
-    setRandomNumber(getRndInteger(1, 7))
-  }
-
+const DiceNumber = ({ randomNumber, rolldice }) => {
   return (
     <>
       <Container>
         <img
-          onClick={change_image}
+          onClick={rolldice}
           src={`/images/dice_${randomNumber}.png`}
           alt="dice-image"
         />
