@@ -1,8 +1,6 @@
-# React + Vite
+# A simple Dice Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A project made with React and styled components library. 
+![Alt Start](/public/repo/start.png)_
+![Alt Main](/public/repo/main.png)_
+![Alt Error](/public/repo/error.png)_
